@@ -1,3 +1,4 @@
+بصيغة HTML
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -130,30 +131,7 @@
     <form id="order-form">
       <input type="text" id="customer-name" placeholder="👤 الاسم الكامل" required />
       <input type="tel" id="customer-phone" placeholder="📞 رقم الهاتف" required />
-      <select id="customer-city" required>
-        <option value="">🏙️ اختر المحافظة</option>
-        <option value="بغداد">بغداد</option>
-        <option value="البصرة">البصرة</option>
-        <option value="الموصل">الموصل</option>
-        <option value="أربيل">أربيل</option>
-        <option value="النجف">النجف</option>
-        <option value="كربلاء">كربلاء</option>
-        <option value="السليمانية">السليمانية</option>
-        <option value="ذي قار">ذي قار</option>
-        <option value="واسط">واسط</option>
-        <option value="كركوك">كركوك</option>
-        <option value="المثنى">المثنى</option>
-        <option value="القادسية">القادسية</option>
-        <option value="صلاح الدين">صلاح الدين</option>
-        <option value="دهوك">دهوك</option>
-        <option value="ديالى">ديالى</option>
-        <option value="بابل">بابل</option>
-        <option value="الأنبار">الأنبار</option>
-        <option value="حلبجة">حلبجة</option>
-        <option value="ميسان">ميسان</option>
-        <option value="النجف الأشرف">النجف الأشرف</option>
-        <option value="السماوة">السماوة</option>
-      </select>
+      <input type="text" id="customer-city" placeholder="🏙️ المحافظة / المدينة" required />
       <input type="text" id="customer-location" placeholder="📍 المنطقة وأقرب نقطة دالة" required />
       <button type="submit">📲 إرسال عبر واتساب</button>
     </form>
@@ -164,9 +142,10 @@
   </div>
 
   <div id="productModal" class="modal">
-    <div class="modal-content
-        <span class="close-button">&times;</span>
-    <div id="product-details-modal-content"></div>
+    <div class="modal-content">
+      <button class="close-button">❎</button>
+      <div id="product-details-modal-content"></div>
+    </div>
   </div>
 
   <div class="notification"></div>
