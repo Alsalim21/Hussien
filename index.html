@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>أعلاف السالم</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <header class="hero-header">
+    <div class="overlay"></div>
+    <div class="header-content">
+      <h1>أعلاف السالم</h1>
+      <p>لسنا الوحيدين لكننا الأفضل</p>
+      <div class="contact-links">
+        <span>للتواصل والاستفسار:</span>
+        <a class="contact-btn whatsapp" href="https://wa.me/9647506932549" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="واتساب" class="contact-icon">
+          واتساب
+        </a>
+        <a class="contact-btn messenger" href="https://m.me/a.laf.alsalm" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Facebook_Messenger_logo_2020.svg" alt="ماسنجر" class="contact-icon">
+          ماسنجر
+        </a>
+        <a class="contact-btn phone" href="tel:07763626072">
+          <i class="ri-phone-line contact-icon"></i>
+          اتصال
+        </a>
+      </div>
+      <div class="header-address">
+          <i class="ri-map-pin-line"></i>
+          <a href="https://maps.app.goo.gl/9nRq42u45fpDgvS49" target="_blank">العنوان: موصل - حي البلديات قرب جامع صلة الأرحام</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="promo-banner">
+    <p id="promo-text"></p>
+  </div>
+
+  <div id="main-page">
+    <main>
+      <section class="search-section">
+        <input type="text" id="search-input" placeholder="🔍 ابحث عن منتج..." />
+      </section>
+
+      <section class="tab-bar">
+        <button class="tab-button active" data-tab="all">الرئيسية</button>
+        <button class="tab-button" data-tab="pigeonFeed">علف حمام</button>
+        <button class="tab-button" data-tab="ornamentalBirds">طيور زينة</button>
+        <button class="tab-button" data-tab="specialOffer">عروض خاصة</button>
+        <button class="tab-button" data-tab="customMix">خلطة مخصصة</button>
+      </section>
+      
+      <div id="products-container">
+        <section class="products-section active" id="all-section" data-category="all">
+            <h2 class="section-title">🕊️ جميع المنتجات</h2>
+            <div class="products" id="all-products"></div>
+        </section>
+
+        <section class="products-section" id="pigeonFeed-section" data-category="pigeonFeed">
+          <h2 class="section-title">🕊 قسم علف طيور الحمام</h2>
+          <div class="products" id="pigeonFeed-tab"></div>
+        </section>
+  
+        <section class="products-section" id="ornamentalBirds-section" data-category="ornamentalBirds">
+          <h2 class="section-title">🐦 قسم طيور الزينة</h2>
+          <div class="products" id="ornamentalBirds-tab"></div>
+        </section>
+  
+        <section class="products-section" id="specialOffer-section" data-category="specialOffer">
+          <h2 class="section-title">🎯 قسم العرض الخاص</h2>
+          <div class="products" id="specialOffer-tab"></div>
+        </section>
+  
+        <section class="products-section" id="customMix-section" data-category="customMix">
+          <h2 class="section-title">🧪 قسم الخلطة المخصصة</h2>
+          <div class="custom-mix-layout">
+            <div class="custom-mix-cart-container">
+                <div class="custom-mix-cart">
+                    <h3>سلة الخلط المخصصة</h3>
+                    <div id="custom-mix-items">
+                        <p class="empty-message">لم يتم اختيار أي مكونات بعد.</p>
+                    </div>
+                    <div class="custom-mix-totals">
+                        <p>إجمالي الوزن: <span id="custom-mix-weight">0</span> كغ</p>
+                        <p>المبلغ الإجمالي: <span id="custom-mix-price">0</span> دينار</p>
+                    </div>
+                    <button id="add-custom-mix-to-cart" class="add-to-cart-home" disabled>أضف الخلطة إلى سلة التسوق</button>
+                </div>
+            </div>
+            <div class="products custom-mix-products-grid" id="customMix-list"></div>
+          </div>
+        </section>
+      </div>
+
+    </main>
+  </div>
+
+  <section class="cart">
+    <h2><i class="ri-shopping-cart-2-line"></i> سلة التسوق</h2>
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>📦 المنتج</th>
+          <th>⚖️ الكمية</th>
+          <th>💵 السعر</th>
+          <th>💰 الإجمالي</th>
+          <th>❎ حذف</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items"></tbody>
+    </table>
+    <p id="cart-total">💰 الإجمالي: 0 دينار</p>
+
+    <p class="delivery-note">
+      <i class="ri-truck-line"></i> <strong>ملاحظة التوصيل:</strong><br>
+      - تكلفة التوصيل إلى المحافظات: 6000 دينار<br>
+      - كل ٢٥ كيلو تعتبر طلبية واحدة الى المحافظات بسبب سياسة شركة التوصيل<br>
+      - تكلفة التوصيل داخل الموصل: من 2000 إلى 5000 دينار حسب المنطقة<br>
+      - هذه التكاليف لا تشمل العروض الخاصة بالتوصيل المجاني
+    </p>
+  </section>
+
+  <section class="order-form">
+    <h2><i class="ri-mail-send-line"></i> إرسال الطلب</h2>
+    <form id="order-form">
+      <input type="text" id="customer-name" placeholder="👤 الاسم الكامل" required />
+      <input type="tel" id="customer-phone" placeholder="📞 رقم الهاتف" required />
+      <input type="text" id="customer-city" placeholder="🏙️ المحافظة / المدينة" required />
+      <input type="text" id="customer-location" placeholder="📍 المنطقة وأقرب نقطة دالة" required />
+      <button type="submit">📲 إرسال عبر واتساب</button>
+    </form>
+  </section>
+
+  <div class="visitor-counter-container">
+    <p>عدد الزوار خلال آخر 24 ساعة: <span id="visitor-count">125</span></p>
+  </div>
+
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <button class="close-button">❎</button>
+      <div id="product-details-modal-content"></div>
+    </div>
+  </div>
+
+  <div class="notification"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
