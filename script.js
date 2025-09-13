@@ -1,4 +1,3 @@
-بصيغة javascript
 // ===== المنتجات (بيانات منفصلة) مع إضافة وصف تفصيلي =====
 const productsData = {
     pigeonFeed: [
