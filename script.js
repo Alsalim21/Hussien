@@ -6,7 +6,7 @@ const productsData = {
       { name: "خلطة حنطة خشنة", price: 600, image: "https://www2.0zz0.com/2025/08/03/15/492413115.jpeg", description: "(ضع وصف للمنتج)" },
       { name: "خلطة حنطة ناعمة", price: 700, image: "https://h.top4top.io/p_3543as19t5.jpeg", description: "(ضع وصف للمنتج)" },
       { name: "خلطة ناعمة بدون حنطة", price: 900, image: "https://j.top4top.io/p_3543nyygq7.jpeg", description: "(ضع وصف للمنتج)" },
-      { name: "خلطة خشنة بدون حنطة", price: 900, image: "PUT_IMAGE_URL", description: "(ضع وصف للمنتج)" },
+      { name: "خلطة خشنة بدون حنطة", price: 900, image: "https://e.top4top.io/p_3544z8aaw1.jpeg", description: "(ضع وصف للمنتج)" },
       { name: "دخن", price: 800, image: "https://www2.0zz0.com/2025/08/03/15/867668577.jpeg", description: "(ضع وصف للمنتج)" },
       { name: "الدخن الاحمر", price: 1000, image: "https://j.top4top.io/p_3543ygepj5.jpeg", description: "(أضف وصف المنتج هنا)" },
       { name: "الحب الابيض (قرطم)", price: 1250, image: "https://f.top4top.io/p_35437tj4y6.jpeg", description: "(أضف وصف المنتج هنا)" },
